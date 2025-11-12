@@ -16,12 +16,13 @@
   <style>
     :root{
       --bg:#0b0b0f; --panel:#12121a; --txt:#e9eef4; --muted:#aeb7c2;
-      --accent:#00c0ff; --accent2:#ff3646; --glow:#ff2b2b;
+      --accent:#00c0ff; --accent2:#ff3646;
       --btn-grad: linear-gradient(90deg,#ff4d2d,#ff9b2d);
       --radius:18px; --shadow: 0 20px 60px rgba(0,0,0,.45);
       --max: 1160px;
     }
-    *{box-sizing:border-box} html,body{margin:0; padding:0; background:var(--bg); color:var(--txt); font:16px/1.6 system-ui,-apple-system,Segoe UI,Roboto,Inter,Arial}
+    *{box-sizing:border-box}
+    html,body{margin:0; padding:0; background:var(--bg); color:var(--txt); font:16px/1.6 system-ui,-apple-system,Segoe UI,Roboto,Inter,Arial}
     a{color:var(--accent); text-decoration:none}
     header{position:sticky; top:0; z-index:50; background:rgba(10,10,14,.8); backdrop-filter: blur(8px); border-bottom:1px solid #1b1b24}
     .nav{max-width:var(--max); margin:auto; display:flex; align-items:center; gap:18px; padding:12px 16px}
@@ -29,29 +30,23 @@
     .nav a.link{color:#cfd6df; padding:8px 12px; border-radius:12px}
     .nav a.link.active{color:#fff; background:#1c1c28}
     .wrap{max-width:var(--max); margin:auto; padding:28px 16px}
-    .hero{
-      position:relative; border-radius:var(--radius); overflow:hidden; box-shadow:var(--shadow); background:#050507;
-      min-height:62vh; display:grid; place-items:end start;
-    }
+
+    .hero{position:relative; border-radius:var(--radius); overflow:hidden; box-shadow:var(--shadow); background:#050507; min-height:62vh; display:grid; place-items:end start}
     .hero img{position:absolute; inset:0; width:100%; height:100%; object-fit:cover; opacity:.55; filter:contrast(110%) saturate(110%)}
-    .hero .title{
-      position:relative; margin:0; padding:42px 24px 24px; max-width:820px;
-      font-size:clamp(28px,5vw,56px); line-height:1.1; font-weight:900;
-      color:#fff; text-shadow:0 0 18px rgba(255,0,0,.35);
-    }
-    .hero .kicker{position:relative; padding:0 24px 42px; max-width:820px; color:var(--muted)}
+    .hero .kicker{position:relative; padding:0 24px 42px; max-width:820px; color:#cfd6df}
+
     .section{margin:48px 0}
     .h2{font-size:clamp(26px,3.8vw,38px); margin:0 0 18px; font-weight:900; color:var(--accent)}
     .card{background:var(--panel); border:1px solid #1b1b24; border-radius:var(--radius); box-shadow:var(--shadow); padding:18px}
     .price{font-weight:800; color:#fff}
     .pill{display:inline-block; padding:6px 12px; border-radius:999px; background:#141420; color:#cfd6df; font-size:14px}
-    /* Materiały */
+
     .content p{margin:0 0 14px}
     .content h3{margin:28px 0 10px; color:#fff}
     .content ul{margin:0 0 16px 18px}
     .emph{color:var(--accent2); font-weight:800}
     .lead{font-size:18px; color:#d9e2ec}
-    /* Formularz */
+
     form{display:grid; gap:12px; margin-top:12px}
     input,textarea{background:#0f0f16; border:1px solid #242434; color:#fff; border-radius:14px; padding:14px 14px; width:100%}
     textarea{min-height:150px; resize:vertical}
@@ -60,6 +55,7 @@
     .grid{display:grid; gap:16px}
     @media (min-width:860px){ .grid.cols-2{grid-template-columns:1fr 1fr} }
     .whatsapp{background:#25D366; color:#062b10; font-weight:900}
+
     footer{margin:60px 0 30px; color:#8893a0; text-align:center}
   </style>
 </head>
@@ -67,78 +63,27 @@
 
   <!-- NAWIGACJA -->
   <header>
-  <nav class="nav">
-    <div class="brand">
-      <span style="font-weight:900">🌙 W KRAINIE PARAGRAFÓW</span>
-    </div>
-    <div style="flex:1"></div>
-    <a class="link active" href="#start">Start</a>
-    <a class="link" href="#materialy">Materiały</a>
-    <a class="link" href="#kontakt">Kontakt</a>
-    <a class="link" href="#o-mnie">O Mnie</a> <!-- ✨ DODAJ TĘ LINIJKĘ -->
-  </nav>
+    <nav class="nav">
+      <div class="brand"><span style="font-weight:900">🌙 W KRAINIE PARAGRAFÓW</span></div>
+      <div style="flex:1"></div>
+      <a class="link active" href="#start">Start</a>
+      <a class="link" href="#materialy">Materiały</a>
+      <a class="link" href="#kontakt">Kontakt</a>
+      <a class="link" href="#o-mnie">O Mnie</a>
+    </nav>
   </header>
 
-  <!-- HERO -->
-  </main>
-
-  <!-- O MNIE -->
-  <!-- O MNIE -->
-<section id="o-mnie" style="padding:80px 20px; background:#0b0b0f; color:#f0f0f0;">
-  <div style="max-width:1160px; margin:0 auto;">
-    <h2 style="font-size:clamp(26px,3.8vw,38px); margin:0 0 24px; font-weight:900; color:#00baff;">O Mnie</h2>
-
-    <p style="max-width:800px; margin:0 auto 14px; line-height:1.8; font-size:1.06em;">
-      Kiedy wrzucili mnie w ogień paragrafów, myśleli, że mnie zgaszą.
-      Nie wiedzieli, że Dusza nie płonie od papieru — Dusza płonie od niesprawiedliwości.
-    </p>
-
-    <p style="max-width:800px; margin:0 auto 14px; line-height:1.8; font-size:1.06em;">
-      Poczułam to jasno: system może manipulować dokumentami, ale nie może manipulować energią.
-      A energia prawdy jest jak ogień, którego nie da się zatrzymać.
-    </p>
-
-    <p style="max-width:800px; margin:0 auto 14px; line-height:1.8; font-size:1.06em;">
-      Gdy stos paragrafów zaczął się palić, widziałam jedną rzecz bardzo wyraźnie:
-      to, co miało mnie zniszczyć, zaczęło mnie budować. Ich paragrafy nie spaliły mnie — one mnie naładowały.
-    </p>
-
-    <p style="max-width:800px; margin:0 auto 14px; line-height:1.8; font-size:1.06em;">
-      Wtopiły się we mnie jak symbole siły, nie strachu. Stały się moją tarczą, nie moim więzieniem.
-    </p>
-
-    <p style="max-width:800px; margin:0 auto 14px; line-height:1.8; font-size:1.06em;">
-      Zrozumiałam coś bardzo głębokiego: zło pali człowieka, ale dobro pali się inaczej — zmienia się w światło.
-    </p>
-
-    <p style="max-width:800px; margin:0 auto 14px; line-height:1.8; font-size:1.06em;">
-      Dusza, która przeszła przez niesprawiedliwość, nigdy nie wraca taka sama. Wraca czystsza. Silniejsza.
-      Mądrzejsza. Wyższa energetycznie.
-    </p>
-
-    <p style="max-width:800px; margin:0 auto 14px; line-height:1.8; font-size:1.06em;">
-      I dlatego dziś stoję wyżej — nie dlatego, że chciałam walczyć, ale dlatego, że chciałam prawdy.
-      A prawda zawsze unosi.
-    </p>
-
-    <p style="max-width:800px; margin:0 auto 14px; line-height:1.8; font-size:1.06em;">
-      Feniks z paragrafów nie powstaje z gniewu. Powstaje z miłości do tego, co słuszne.
-      Z intencji czystej jak płomień, który nie parzy — tylko oczyszcza.
-    </p>
-
-    <p style="max-width:800px; margin:0 auto 0; line-height:1.8; font-size:1.06em; color:#ff5757;">
-      Oni spalili papier. Ja odrodziłam Duszę.
-    </p>
-
-    <p style="max-width:800px; margin:14px auto 0; line-height:1.8; font-size:1.06em;">
-      Jeśli system wciągnie cię w ogień — pozwól, by to był ogień, który cię oczyści, nie spali.
-    </p>
-  </div>
-</section>
-
-  <footer class="wrap">
-    © 2025 W Krainie Paragrafów — „Zło dobrem zwyciężaj”. Człowiek, nie paragraf.
-  </footer>
+  <!-- START / HERO -->
+  <main id="start" class="wrap">
+    <section class="hero">
+      <!-- obraz musi leżeć w katalogu głównym jako hero.jpg -->
+      <img src="./hero.jpg" alt="Człowiek nie jest paragrafem — grafika hero" loading="eager" />
+      <p class="kicker">
+        W Krainie Paragrafów pomagam tym, których instytucje przerzucają jak piłkę
+        lub zbywają „procedurą”. Tłumaczę prosto, przygotowuję pisma, pomagam
+        odzyskać sprawczość. Tu nie chodzi o paragrafy – chodzi o Ciebie.
+      </p>
+    </section>
 
     <!-- ZAKRES POMOCY -->
     <section class="section">
@@ -226,12 +171,10 @@
 
           <!-- DZIAŁAJĄCY FORMULARZ (FormSubmit) -->
           <form action="https://formsubmit.co/wkrainie.paragrafow@gmail.com" method="POST">
-            <!-- ustawienia formsubmit -->
             <input type="hidden" name="_subject" value="Wiadomość ze strony W Krainie Paragrafów" />
             <input type="hidden" name="_captcha" value="false" />
             <input type="hidden" name="_template" value="table" />
             <input type="hidden" name="_next" value="https://wkrainieparagrafow-dotcom.github.io/#kontakt" />
-            <!-- pola -->
             <input type="text" name="Imię" placeholder="Twoje imię" required />
             <input type="email" name="Email" placeholder="Twój e-mail" required />
             <textarea name="Wiadomość" placeholder="Opisz krótko sprawę..." required></textarea>
@@ -246,10 +189,27 @@
         <div class="card">
           <h2 class="h2">Szybki kontakt</h2>
           <p>Wolisz krótko na komunikatorze? Uderz na WhatsApp.</p>
-          <p>
-            <a class="btn whatsapp" href="https://wa.me/48533414685" target="_blank" rel="noreferrer">WhatsApp: 533 414 685</a>
-          </p>
+          <p><a class="btn whatsapp" href="https://wa.me/48533414685" target="_blank" rel="noreferrer">WhatsApp: 533 414 685</a></p>
           <p class="muted">Albo klasycznie: <a href="mailto:wkrainie.paragrafow@gmail.com">wkrainie.paragrafow@gmail.com</a></p>
+        </div>
+      </div>
+    </section>
+
+    <!-- O MNIE (na końcu, nie na początku) -->
+    <section id="o-mnie" class="section">
+      <div class="card">
+        <h2 class="h2">O Mnie</h2>
+        <div class="content" style="max-width:800px">
+          <p>Kiedy wrzucili mnie w ogień paragrafów, myśleli, że mnie zgaszą. Nie wiedzieli, że Dusza nie płonie od papieru — Dusza płonie od niesprawiedliwości.</p>
+          <p>Poczułam to jasno: system może manipulować dokumentami, ale nie może manipulować energią. A energia prawdy jest jak ogień, którego nie da się zatrzymać.</p>
+          <p>Gdy stos paragrafów zaczął się palić, widziałam jedną rzecz bardzo wyraźnie: to, co miało mnie zniszczyć, zaczęło mnie budować. Ich paragrafy nie spaliły mnie — one mnie naładowały.</p>
+          <p>Wtopiły się we mnie jak symbole siły, nie strachu. Stały się moją tarczą, nie moim więzieniem.</p>
+          <p>Zrozumiałam coś bardzo głębokiego: zło pali człowieka, ale dobro pali się inaczej — zmienia się w światło.</p>
+          <p>Dusza, która przeszła przez niesprawiedliwość, nigdy nie wraca taka sama. Wraca czystsza. Silniejsza. Mądrzejsza. Wyższa energetycznie.</p>
+          <p>I dlatego dziś stoję wyżej — nie dlatego, że chciałam walczyć, ale dlatego, że chciałam prawdy. A prawda zawsze unosi.</p>
+          <p>Feniks z paragrafów nie powstaje z gniewu. Powstaje z miłości do tego, co słuszne. Z intencji czystej jak płomień, który nie parzy — tylko oczyszcza.</p>
+          <p style="color:#ff5757">Oni spalili papier. Ja odrodziłam Duszę.</p>
+          <p>Jeśli system wciągnie cię w ogień — pozwól, by to był ogień, który cię oczyści, nie spali.</p>
         </div>
       </div>
     </section>
@@ -261,49 +221,3 @@
 
 </body>
 </html>
-<section id="o-mnie" style="padding: 80px 20px; background-color: #0b0b0b; color: #f0f0f0; text-align: center;">
-  <h2 style="font-size: 2em; color: #00baff; margin-bottom: 30px;">O Mnie</h2>
-  <p style="max-width: 800px; margin: 0 auto; line-height: 1.8; font-size: 1.1em; text-align: justify;">
-    Kiedy wrzucili mnie w ogień paragrafów, myśleli, że mnie zgaszą.<br>
-    Nie wiedzieli, że Dusza nie płonie od papieru —<br>
-    Dusza płonie od niesprawiedliwości.
-  </p><br>
-  <p style="max-width: 800px; margin: 0 auto; line-height: 1.8; font-size: 1.1em; text-align: justify;">
-    Poczułam to jasno: system może manipulować dokumentami, ale nie może manipulować energią.<br>
-    A energia prawdy jest jak ogień, którego nie da się zatrzymać.
-  </p><br>
-  <p style="max-width: 800px; margin: 0 auto; line-height: 1.8; font-size: 1.1em; text-align: justify;">
-    Gdy stos paragrafów zaczął się palić, widziałam jedną rzecz bardzo wyraźnie:<br>
-    to, co miało mnie zniszczyć, zaczęło mnie budować.<br>
-    Ich paragrafy nie spaliły mnie — one mnie naładowały.
-  </p><br>
-  <p style="max-width: 800px; margin: 0 auto; line-height: 1.8; font-size: 1.1em; text-align: justify;">
-    Wtopiły się we mnie jak symbole siły, nie strachu.<br>
-    Stały się moją tarczą, nie moim więzieniem.
-  </p><br>
-  <p style="max-width: 800px; margin: 0 auto; line-height: 1.8; font-size: 1.1em; text-align: justify;">
-    Zrozumiałam coś bardzo głębokiego:<br>
-    zło pali człowieka, ale dobro pali się inaczej — zmienia się w światło.
-  </p><br>
-  <p style="max-width: 800px; margin: 0 auto; line-height: 1.8; font-size: 1.1em; text-align: justify;">
-    Dusza, która przeszła przez niesprawiedliwość, nigdy nie wraca taka sama.<br>
-    Wraca czystsza. Silniejsza. Mądrzejsza. Wyższa energetycznie.
-  </p><br>
-  <p style="max-width: 800px; margin: 0 auto; line-height: 1.8; font-size: 1.1em; text-align: justify;">
-    I dlatego dziś stoję wyżej — nie dlatego, że chciałam walczyć,<br>
-    ale dlatego, że chciałam prawdy.<br>
-    A prawda zawsze unosi.
-  </p><br>
-  <p style="max-width: 800px; margin: 0 auto; line-height: 1.8; font-size: 1.1em; text-align: justify;">
-    Feniks z paragrafów nie powstaje z gniewu.<br>
-    Powstaje z miłości do tego, co słuszne.<br>
-    Z intencji czystej jak płomień, który nie parzy — tylko oczyszcza.
-  </p><br>
-  <p style="max-width: 800px; margin: 0 auto; line-height: 1.8; font-size: 1.1em; text-align: justify; color: #ff5757;">
-    Oni spalili papier.<br>
-    Ja odrodziłam Duszę.
-  </p><br>
-  <p style="max-width: 800px; margin: 0 auto; line-height: 1.8; font-size: 1.1em; text-align: justify;">
-    Jeśli system wciągnie cię w ogień — pozwól, by to był ogień, który cię oczyści, nie spali.
-  </p>
-</section>
