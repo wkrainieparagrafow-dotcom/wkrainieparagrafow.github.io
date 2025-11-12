@@ -1,234 +1,161 @@
-<!doctype html>
+<!DOCTYPE html>
 <html lang="pl">
 <head>
-  <meta charset="utf-8" />
-  <meta name="viewport" content="width=device-width, initial-scale=1" />
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <meta name="description" content="W Krainie Paragrafów – wsparcie dla osób zagubionych w gąszczu urzędów i paragrafów. Pomoc oparta na empatii, doświadczeniu i ludzkim podejściu.">
+  <meta name="keywords" content="pomoc urzędowa, wsparcie obywatela, jak napisać pismo, prawo po ludzku, W Krainie Paragrafów, ludzkie prawo, instytucje, procedury, biurokracja, empatia, Alicja Bingel, zrozumienie, doświadczenie, wsparcie, sprawy urzędowe, MOPS, KRS, sąd, policja, urząd, człowiek nie paragraf">
+  <meta name="author" content="W Krainie Paragrafów">
   <title>W Krainie Paragrafów</title>
-  <meta name="description" content="Prosty język, zero waty. Transparentność i źródła. Szacunek i stanowczość jednocześnie." />
-  <link rel="preload" as="image" href="hero.jpg" />
   <style>
-    :root{
-      --bg:#0c0d10; --panel:#11141a; --text:#e8eef6; --muted:#a9b4c0;
-      --brand:#38bdf8; --accent:#ff3b3b; --glow:#ff3b3b;
-      --ring: 0 0 0 2px rgba(56,189,248,.35);
-      --shadow: 0 10px 30px rgba(0,0,0,.45);
+    body {
+      margin: 0;
+      font-family: 'Segoe UI', sans-serif;
+      background-color: #0a0a0a;
+      color: #fff;
     }
-    *{box-sizing:border-box}
-    html,body{margin:0;padding:0;background:var(--bg);color:var(--text);font-family:system-ui,-apple-system,Segoe UI,Roboto,Inter,Arial,sans-serif;line-height:1.6}
-    a{color:var(--brand);text-decoration:none}
-    header{position:sticky;top:0;z-index:10;background:linear-gradient(90deg,#0a1a2b,#091520 70%);box-shadow:0 1px 0 rgba(255,255,255,.06)}
-    .container{max-width:1100px;margin:0 auto;padding:0 18px}
-    .bar{display:flex;align-items:center;gap:18px;padding:14px 0}
-    .logo{font-weight:800;letter-spacing:.03em}
-    .logo span{display:block;font-size:13px;color:var(--muted);font-weight:600}
-    nav{margin-left:auto;display:flex;gap:14px}
-    nav a{color:#fff;background:#0006;border:1px solid #ffffff1a;border-radius:999px;padding:7px 14px}
-    nav a.active{background:linear-gradient(90deg,#1fb6ff,#ff3b3b);font-weight:700}
-
-    /* HERO */
-    .hero{
-      position:relative;min-height:86vh;display:grid;place-items:center;text-align:center;
-      background: #08090c url('hero.jpg') center/cover no-repeat fixed;
-      overflow:hidden;
+    header {
+      background: rgba(0,0,0,0.9);
+      text-align: center;
+      padding: 20px;
+      border-bottom: 2px solid #ff2a2a;
     }
-    .hero::before{
-      content:"";position:absolute;inset:0;
-      background: radial-gradient(1200px 600px at 50% 20%, rgba(255,59,59,.25), transparent 60%),
-                  radial-gradient(800px 400px at 80% 70%, rgba(56,189,248,.18), transparent 60%),
-                  linear-gradient(180deg,rgba(0,0,0,.35),rgba(0,0,0,.75));
-      animation:mist 8s ease-in-out infinite alternate;
+    header h1 {
+      color: #ff2a2a;
+      font-size: 2em;
+      margin: 0;
+      text-transform: uppercase;
+      letter-spacing: 2px;
     }
-    @keyframes mist{
-      from{opacity:.6;transform:scale(1)}
-      to{opacity:.85;transform:scale(1.05)}
+    section {
+      padding: 80px 20px;
+      text-align: center;
     }
-    .hero h1{
-      position:relative;margin:0 16px;padding:24px 20px;border-radius:16px;border:2px solid var(--accent);
-      color:var(--accent);font-size:clamp(28px,6vw,48px);font-weight:900;letter-spacing:.02em;
-      text-shadow:0 0 22px var(--glow), 0 0 50px var(--glow);
-      background:rgba(0,0,0,.45);box-shadow:0 0 30px rgba(255,59,59,.25), inset 0 0 40px rgba(255,59,59,.1);
+    .hero {
+      background: url('hero.jpg') center/cover no-repeat;
+      padding: 120px 20px;
     }
-
-    /* SEKCJE */
-    section{padding:56px 0;border-top:1px solid #ffffff12}
-    h2{font-size:clamp(24px,4.5vw,34px);margin:0 0 18px}
-    .muted{color:var(--muted)}
-
-    .cards{display:grid;gap:16px;grid-template-columns:repeat(auto-fit,minmax(260px,1fr));margin-top:12px}
-    .card{background:var(--panel);border:1px solid #ffffff12;border-radius:14px;padding:18px;box-shadow:var(--shadow)}
-    .bullet{display:flex;gap:10px;align-items:flex-start}
-    .dot{width:10px;height:10px;background:var(--brand);border-radius:50%;margin-top:10px;box-shadow:0 0 16px rgba(56,189,248,.6)}
-
-    /* MATERIAŁY (Twój tekst) */
-    .content{max-width:800px}
-    .content h3{color:var(--accent);text-transform:uppercase;letter-spacing:.03em}
-    .content strong{color:#fff}
-
-    /* KONTAKT */
-    form{display:grid;gap:12px;margin-top:12px}
-    input,textarea{
-      width:100%;padding:14px;border-radius:12px;background:#0b0d12;color:#fff;
-      border:1px solid #233041;outline:none
+    .overlay {
+      background: rgba(0,0,0,0.6);
+      border-radius: 20px;
+      max-width: 900px;
+      margin: 0 auto;
+      padding: 40px;
     }
-    input:focus,textarea:focus{box-shadow:var(--ring);border-color:#2a89b9}
-    textarea{min-height:150px;resize:vertical}
-    .btn{
-      display:inline-block;border:none;cursor:pointer;border-radius:999px;font-weight:800;
-      padding:12px 18px;color:#fff;background:linear-gradient(90deg,#1fb6ff,#ff3b3b);box-shadow:0 6px 18px rgba(255,59,59,.28)
+    .overlay h2 {
+      color: #ff4040;
+      text-transform: uppercase;
+      text-shadow: 0 0 20px #ff0000;
+      font-size: 2.4em;
+      margin-bottom: 20px;
     }
-    footer{padding:28px 0;color:var(--muted);border-top:1px solid #ffffff12}
+    .overlay p {
+      color: #e6e6e6;
+      font-size: 1.2em;
+      line-height: 1.6em;
+    }
+    .btn {
+      display: inline-block;
+      margin: 20px 10px;
+      padding: 14px 28px;
+      border-radius: 30px;
+      text-decoration: none;
+      font-weight: bold;
+      font-size: 1.1em;
+      color: white;
+      transition: 0.3s;
+    }
+    .btn:hover {
+      transform: scale(1.05);
+      box-shadow: 0 0 15px #ff2a2a;
+    }
+    .btn-red {
+      background: linear-gradient(90deg, #ff0000, #ff7b00);
+    }
+    .btn-green {
+      background: linear-gradient(90deg, #25d366, #128c7e);
+    }
+    .section-dark {
+      background-color: #111;
+    }
+    .contact-form {
+      max-width: 500px;
+      margin: 0 auto;
+      display: flex;
+      flex-direction: column;
+      gap: 15px;
+    }
+    .contact-form input, .contact-form textarea {
+      padding: 12px;
+      border-radius: 8px;
+      border: none;
+      outline: none;
+      font-size: 1em;
+    }
+    .contact-form button {
+      background: linear-gradient(90deg, #ff0000, #ff7b00);
+      color: white;
+      border: none;
+      border-radius: 10px;
+      padding: 14px;
+      font-size: 1.1em;
+      cursor: pointer;
+      transition: 0.3s;
+    }
+    .contact-form button:hover {
+      transform: scale(1.05);
+      box-shadow: 0 0 10px #ff2a2a;
+    }
+    footer {
+      text-align: center;
+      padding: 20px;
+      background: #000;
+      color: #999;
+      font-size: 0.9em;
+      border-top: 1px solid #222;
+    }
   </style>
 </head>
 <body>
 
-  <header>
-    <div class="container bar">
-      <div class="logo">🌙 W KRAINIE PARAGRAFÓW <span>człowiek > paragraf</span></div>
-      <nav>
-        <a href="#start" class="active">Start</a>
-        <a href="#materialy">Materiały</a>
-        <a href="#kontakt">Kontakt</a>
-      </nav>
-    </div>
-  </header>
+<header>
+  <h1>W Krainie Paragrafów</h1>
+</header>
 
-  <main id="start">
-    <!-- HERO -->
-    <section class="hero">
-      <h1>⚖️ Człowiek nie jest paragrafem</h1>
-    </section>
+<section class="hero">
+  <div class="overlay">
+    <h2>Człowiek nie jest paragrafem</h2>
+    <p>W Krainie Paragrafów powstała z potrzeby serca ❤️ – by pomóc tym, którzy utknęli w labiryncie urzędów, 
+    przepisów i bezdusznych procedur. Tu nie chodzi o prawo, lecz o <strong>człowieka</strong>.</p>
+    <p>Jeśli instytucje Cię przerzucają, odsyłają lub traktują jak numer w teczce – jesteś we właściwym miejscu.  
+    Pomagam zrozumieć pisma, znaleźć drogę i odzyskać spokój.  
+    Pomoc oparta na <strong>empatii, doświadczeniu i zrozumieniu</strong> 🕊️</p>
+    <a href="mailto:wkrainie.paragrafow@gmail.com" class="btn btn-red">✉️ Napisz do mnie</a>
+    <a href="https://wa.me/48533414685" target="_blank" class="btn btn-green">💬 WhatsApp</a>
+  </div>
+</section>
 
-    <!-- ZAKRES USŁUG / OPIS -->
-    <section>
-      <div class="container">
-        <h2>Co dostajesz ode mnie</h2>
-        <p class="muted">Prosto, uczciwie, po ludzku. Poniżej – konkrety, bez waty.</p>
+<section class="section-dark">
+  <h2 style="color:#2ad1ff;">Zakres Pomocy</h2>
+  <p>Pomagam w przygotowaniu pism, analizie dokumentów, wyjaśnieniu decyzji urzędowych oraz w kontaktach z instytucjami.  
+  Cena usług: <strong>100–300 zł</strong> w zależności od złożoności sprawy.  
+  W wyjątkowych przypadkach możliwa niższa kwota – <strong>liczy się człowiek, nie paragraf</strong>.</p>
+</section>
 
-        <div class="cards">
-          <div class="card">
-            <div class="bullet">
-              <div class="dot"></div>
-              <div>
-                <h3>Prosty język, zero waty</h3>
-                <p>Pisma, które naprawdę da się czytać – tak, żeby urzędnik zrozumiał, a Ty miał/a spokój.</p>
-              </div>
-            </div>
-          </div>
+<section id="kontakt">
+  <h2 style="color:#ff4040;">Kontakt</h2>
+  <p>Masz pytanie lub potrzebujesz pomocy? Napisz do mnie bezpośrednio.</p>
+  <form action="https://formspree.io/f/mwpejvdp" method="POST" class="contact-form">
+    <input type="text" name="name" placeholder="Twoje imię" required>
+    <input type="email" name="_replyto" placeholder="Twój e-mail" required>
+    <textarea name="message" placeholder="Opisz swoją sprawę..." rows="5" required></textarea>
+    <button type="submit">Wyślij wiadomość</button>
+  </form>
+</section>
 
-          <div class="card">
-            <div class="bullet">
-              <div class="dot"></div>
-              <div>
-                <h3>Transparentność i źródła</h3>
-                <p>Każda teza ma oparcie w przepisach i orzeczeniach. Masz linki, sygnatury i podstawy.</p>
-              </div>
-            </div>
-          </div>
-
-          <div class="card">
-            <div class="bullet">
-              <div class="dot"></div>
-              <div>
-                <h3>Szacunek i stanowczość</h3>
-                <p>Ton spokojny, treść twarda. Bez agresji, ale bez uległości.</p>
-              </div>
-            </div>
-          </div>
-
-          <div class="card">
-            <div class="bullet">
-              <div class="dot"></div>
-              <div>
-                <h3>Wzory i checklisty</h3>
-                <p>Gotowce i listy krok po kroku – żeby nic Ci nie uciekło.</p>
-              </div>
-            </div>
-          </div>
-
-          <div class="card">
-            <div class="bullet">
-              <div class="dot"></div>
-              <div>
-                <h3>Strategia komunikacji</h3>
-                <p>Co, do kogo i kiedy – żeby nie wpaść w proceduralną pułapkę.</p>
-              </div>
-            </div>
-          </div>
-
-          <div class="card">
-            <div class="bullet">
-              <div class="dot"></div>
-              <div>
-                <h3>Konsultacje merytoryczne</h3>
-                <p>Wspólne czytanie akt, wybór ścieżki, plan działania.</p>
-              </div>
-            </div>
-          </div>
-        </div>
-      </div>
-    </section>
-
-    <!-- MATERIAŁY – Twój pełny tekst -->
-    <section id="materialy">
-      <div class="container content">
-        <h2>Materiały</h2>
-        <h3>MANIPULACJE PROCEDURALNE — JAK SYSTEM ZAMIENIA PRAWO W ILUZJĘ 🔮</h3>
-
-        <p>W piekielnym systemie paragrafy nie są mieczem ⚔️ sprawiedliwości. Są narzędziem iluzji 🧙</p>
-        <p>Instytucje nie muszą łamać prawa wprost — wystarczy, że je powykrzywiają, żeby wyglądało, jakby wszystko działo się „zgodnie z procedurą”. To właśnie manipulacje proceduralne są sercem ❤️ całej machiny: cichym, perfekcyjnie naoliwionym mechanizmem, który pozwala w majestacie prawa robić rzeczy absolutnie bezprawne.</p>
-
-        <h4>✅ 1. Procedura jako zasłona dymna – „my tylko stosujemy przepisy”</h4>
-        <p>W mojej sprawie instytucje stosowały dobrze znaną sztuczkę: udawały, że działają zgodnie z prawem, podczas gdy faktycznie nadużywały procedur, żeby osiągnąć efekt niemożliwy do uzyskania uczciwie.</p>
-        <p><strong>Zestaw najczęstszych tricków:</strong></p>
-        <ul>
-          <li>powoływanie się na przepisy, które nie mają w ogóle zastosowania,</li>
-          <li>pomijanie tych, które są kluczowe,</li>
-          <li>cytowanie jednej linijki ustawy, ale ignorowanie całej reszty,</li>
-          <li>używanie pojęć nieistniejących w prawie, np. „informacja niepodlegająca udostępnieniu, ale nie decyzja” — czysta fikcja.</li>
-        </ul>
-        <p>Instytucja nie musi łamać paragrafów. Wystarczy, że przedstawi ich interpretację tak absurdalną, że odwróci sens całego przepisu.</p>
-
-        <h4>✅ 2. „To nie decyzja, to informacja” — klasyczna pułapka proceduralna</h4>
-        <p>Najbardziej perfidna manipulacja:</p>
-        <p><strong>Odpowiedź udaje pismo urzędowe, ale formalnie NIE jest decyzją.</strong></p>
-        <p><em>Efekt?</em> brak odwołania, brak skargi, brak stron, brak akt, brak terminów, brak podstaw do WSA. A instytucja mówi: „Nie wydaliśmy decyzji — więc nie możemy jej uchylić.” Pismo wygląda oficjalnie, ale nie ma mocy prawnej. To celowe. To narzędzie uciszenia.</p>
-
-        <h4>✅ 3. Rozbijanie wątków — rozmywanie odpowiedzialności</h4>
-        <p>Jedna sprawa zamienia się w kilka procedur, wiele numerów, mnóstwo pism – i zero odpowiedzialnych. Każdy „nie jest właściwy”, nikt nie patrzy na całość. Metoda po to, by nie widzieć nadużycia, zgubić kontekst i obywatela w labiryncie paragrafów.</p>
-
-        <h4>✅ 4. Proceduralny ping-pong</h4>
-        <p>Policja → prokuratura → sąd → policja → KGP → jednostka lokalna → „kompetencja KGP”. Piłka w grze. To nie błąd – funkcja systemu.</p>
-
-        <h4>✅ 5. Nadużycie procedury jako forma przemocy</h4>
-        <p>Bez siniaków, bez świadków, bez protokołu. Prawo zostaje na papierze, w praktyce – gra pozorów. Obywatel przegrywa, dopóki nie walczy o każde słowo, przepis i podpis.</p>
-
-        <p><strong>To nie państwo prawa. To piekielny system proceduralny, który broni sam siebie, nie obywatela.</strong></p>
-      </div>
-    </section>
-
-    <!-- KONTAKT -->
-    <section id="kontakt">
-      <div class="container">
-        <h2>Kontakt</h2>
-        <p class="muted">Masz sprawę? Napisz krótko, o co chodzi. Odezwę się.</p>
-
-        <!-- Formularz: gotowy pod Formspree (wstaw swój endpoint) -->
-        <form action="https://formspree.io/f/your_form_id" method="POST">
-          <input type="text" name="name" placeholder="Twoje imię" required />
-          <input type="email" name="email" placeholder="Twój e-mail" required />
-          <textarea name="message" placeholder="Treść wiadomości" required></textarea>
-          <button class="btn" type="submit">Wyślij wiadomość</button>
-        </form>
-
-        <!-- Fallback: zwykły mail -->
-        <p style="margin-top:10px">Wolisz e-mail? Napisz: <a href="mailto:kontakt@twojadomena.pl">kontakt@twojadomena.pl</a></p>
-      </div>
-    </section>
-  </main>
-
-  <footer>
-    <div class="container">© 2025 W Krainie Paragrafów — wszystkie prawa zastrzeżone</div>
-  </footer>
+<footer>
+  <p>© 2025 W Krainie Paragrafów | Stworzone z serca przez Alicję z Bajki</p>
+</footer>
 
 </body>
 </html>
