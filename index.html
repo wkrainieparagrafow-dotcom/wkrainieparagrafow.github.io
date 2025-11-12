@@ -8,35 +8,78 @@
     body {
       margin: 0;
       font-family: 'Segoe UI', sans-serif;
-      background-color: #0b0c10;
+      background-color: #07080d;
       color: #f0f0f0;
       text-align: center;
     }
 
     header {
-      background: linear-gradient(90deg, #0f2027, #203a43, #2c5364);
-      padding: 1rem;
+      background: linear-gradient(90deg, #000428, #004e92);
+      padding: 1.5rem;
       color: #fff;
-      font-size: 1.5rem;
+      font-size: 1.8rem;
       letter-spacing: 1px;
+      text-transform: uppercase;
     }
 
     .hero {
       position: relative;
       height: 100vh;
-      background: url('file_00000000a13c72438c4048eff51ba3e0') no-repeat center center/cover;
+      background: url('hero.jpg') no-repeat center center/cover;
       display: flex;
       align-items: center;
       justify-content: center;
-      text-shadow: 0 0 20px #000;
+      text-shadow: 0 0 25px #000;
     }
 
     .hero h1 {
       color: #ff2e2e;
-      font-size: 2.5rem;
-      background: rgba(0, 0, 0, 0.4);
+      font-size: 3rem;
+      background: rgba(0, 0, 0, 0.5);
+      padding: 20px 30px;
+      border-radius: 15px;
+      border: 2px solid #ff2e2e;
+      box-shadow: 0 0 20px #ff2e2e;
+    }
+
+    section {
+      padding: 3rem 1rem;
+    }
+
+    h2 {
+      color: #61dafb;
+    }
+
+    form {
+      background-color: rgba(255,255,255,0.05);
+      border-radius: 15px;
+      max-width: 400px;
+      margin: 0 auto;
+      padding: 20px;
+      box-shadow: 0 0 15px rgba(255,255,255,0.1);
+    }
+
+    input, textarea {
+      width: 90%;
+      padding: 10px;
+      margin: 10px 0;
+      border: none;
+      border-radius: 5px;
+      font-size: 1rem;
+    }
+
+    button {
+      background: linear-gradient(90deg, #ff416c, #ff4b2b);
+      color: white;
+      border: none;
       padding: 10px 20px;
-      border-radius: 10px;
+      border-radius: 25px;
+      cursor: pointer;
+      font-weight: bold;
+    }
+
+    button:hover {
+      opacity: 0.8;
     }
 
     footer {
@@ -44,20 +87,6 @@
       padding: 2rem 1rem;
       font-size: 1rem;
       color: #aaa;
-    }
-
-    a.contact {
-      display: inline-block;
-      background: linear-gradient(90deg, #2b5876, #4e4376);
-      color: white;
-      padding: 10px 20px;
-      border-radius: 25px;
-      text-decoration: none;
-      font-weight: bold;
-    }
-
-    a.contact:hover {
-      background: linear-gradient(90deg, #ff416c, #ff4b2b);
     }
   </style>
 </head>
@@ -69,8 +98,20 @@
     <h1>Człowiek nie jest paragrafem</h1>
   </section>
 
+  <section id="kontakt">
+    <h2>Kontakt</h2>
+    <p>Masz sprawę? Napisz do nas.</p>
+
+    <form action="https://formspree.io/f/mnqedwzz" method="POST">
+      <input type="text" name="name" placeholder="Twoje imię" required><br>
+      <input type="email" name="email" placeholder="Twój e-mail" required><br>
+      <textarea name="message" rows="5" placeholder="Treść wiadomości" required></textarea><br>
+      <button type="submit">Wyślij wiadomość</button>
+    </form>
+  </section>
+
   <footer>
-    <p>Masz sprawę? Napisz: <a class="contact" href="mailto:kontakt@twojadomena.pl">kontakt@twojadomena.pl</a></p>
+    <p>© 2025 W Krainie Paragrafów | Wszystkie prawa zastrzeżone</p>
   </footer>
 
 </body>
