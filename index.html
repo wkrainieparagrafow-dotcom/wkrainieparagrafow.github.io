@@ -1,196 +1,77 @@
-<!doctype html>
+<!DOCTYPE html>
 <html lang="pl">
 <head>
-<meta charset="utf-8">
-<meta name="viewport" content="width=device-width, initial-scale=1">
-<title>W Krainie Paragrafów – Człowiek nie jest paragrafem</title>
-<meta name="description" content="W Krainie Paragrafów: proste wyjaśnienia, wsparcie i etyka. Człowiek nie jest paragrafem.">
-<link rel="preload" as="image" href="/images/hero.jpg">
-<style>
-  :root{
-    --bg:#0b1020;        /* tło - głęboki granat */
-    --panel:#121831;     /* tło paneli/kart */
-    --text:#e8eef9;      /* podstawowy tekst */
-    --muted:#a9b4c9;     /* słabszy tekst */
-    --blue:#00c2ff;      /* neon niebieski */
-    --red:#ff2d2d;       /* neon czerwony */
-    --accent:#f5f7ff;    /* jasne akcenty */
-    --radius:18px;
-    --shadow:0 10px 30px rgba(0,0,0,.35);
-  }
-  *{box-sizing:border-box}
-  html,body{margin:0;background:var(--bg);color:var(--text);font:16px/1.6 system-ui,-apple-system,Segoe UI,Roboto,Inter,Arial}
-  a{color:var(--blue);text-decoration:none}
-  a:hover{opacity:.9}
-  .wrap{max-width:1100px;margin:0 auto;padding:24px}
-  header{position:sticky;top:0;background:linear-gradient(180deg,rgba(11,16,32,.9),rgba(11,16,32,.6));backdrop-filter:saturate(140%) blur(6px);z-index:10}
-  .nav{display:flex;align-items:center;justify-content:space-between;gap:16px}
-  .brand{display:flex;align-items:center;gap:12px;font-weight:700;letter-spacing:.3px}
-  .logo{width:36px;height:36px;border-radius:50%;background:radial-gradient(circle at 30% 30%,var(--blue),transparent 60%),radial-gradient(circle at 70% 70%,var(--red),transparent 60%),#0a0f22;border:1px solid #223}
-  .btn{display:inline-flex;align-items:center;justify-content:center;padding:12px 18px;border-radius:999px;border:1px solid #233;gap:.5rem;color:var(--accent);background:linear-gradient(90deg,var(--blue),var(--red));box-shadow:var(--shadow);font-weight:700}
-  .btn.alt{background:#0000;border-color:#345;color:var(--text)}
-  .btn.small{padding:10px 14px;font-weight:600}
-  /* HERO */
-  .hero{position:relative;isolation:isolate}
-  .hero .bg{
-    position:absolute;inset:0;z-index:-1;opacity:.5;
-    background: #0b1020 url('/images/hero.jpg') center/cover no-repeat fixed;
-  }
-  .grid{display:grid;grid-template-columns:1.1fr .9fr;gap:28px}
-  .card{background:linear-gradient(180deg,rgba(18,24,49,.9),rgba(18,24,49,.7));border:1px solid #24314f;border-radius:var(--radius);padding:24px;box-shadow:var(--shadow)}
-  h1{font-size:clamp(28px,5vw,46px);line-height:1.15;margin:6px 0 10px}
-  .subtitle{color:var(--muted);font-size:clamp(16px,2.4vw,18px)}
-  .kicker{font-weight:800;letter-spacing:.18em;text-transform:uppercase;color:var(--blue);font-size:.85rem}
-  .tagline{font-weight:800;font-size:clamp(22px,3.8vw,30px);color:var(--accent);text-shadow:0 0 18px rgba(0,194,255,.25),0 0 22px rgba(255,45,45,.18)}
-  .cta{display:flex;flex-wrap:wrap;gap:12px;margin-top:14px}
-  /* SEKCJE */
-  section{padding:54px 0}
-  .section-title{font-size:clamp(22px,3.6vw,30px);margin:0 0 18px}
-  .cols{display:grid;grid-template-columns:repeat(3,1fr);gap:18px}
-  .tile{background:var(--panel);border:1px solid #24314f;border-radius:var(--radius);padding:18px;box-shadow:var(--shadow)}
-  .tile h3{margin:6px 0 6px}
-  .muted{color:var(--muted)}
-  .list{display:grid;gap:10px;margin:0;padding:0;list-style:none}
-  .list li{display:flex;gap:10px;align-items:flex-start}
-  .dot{width:10px;height:10px;border-radius:50%;background:var(--blue);margin-top:.45rem;box-shadow:0 0 12px rgba(0,194,255,.6)}
-  /* STOPKA */
-  footer{padding:40px 0;border-top:1px solid #233;color:#9fb0c8}
-  .foot{display:flex;flex-wrap:wrap;gap:12px;align-items:center;justify-content:space-between}
-  /* RESPONSY */
-  @media (max-width:900px){.grid{grid-template-columns:1fr}.cols{grid-template-columns:1fr 1fr}}
-  @media (max-width:600px){.cols{grid-template-columns:1fr}.btn{width:100%;justify-content:center}}
-</style>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>W Krainie Paragrafów</title>
+  <style>
+    body {
+      margin: 0;
+      font-family: 'Segoe UI', sans-serif;
+      background-color: #0b0c10;
+      color: #f0f0f0;
+      text-align: center;
+    }
+
+    header {
+      background: linear-gradient(90deg, #0f2027, #203a43, #2c5364);
+      padding: 1rem;
+      color: #fff;
+      font-size: 1.5rem;
+      letter-spacing: 1px;
+    }
+
+    .hero {
+      position: relative;
+      height: 100vh;
+      background: url('file_00000000a13c72438c4048eff51ba3e0') no-repeat center center/cover;
+      display: flex;
+      align-items: center;
+      justify-content: center;
+      text-shadow: 0 0 20px #000;
+    }
+
+    .hero h1 {
+      color: #ff2e2e;
+      font-size: 2.5rem;
+      background: rgba(0, 0, 0, 0.4);
+      padding: 10px 20px;
+      border-radius: 10px;
+    }
+
+    footer {
+      background-color: #111;
+      padding: 2rem 1rem;
+      font-size: 1rem;
+      color: #aaa;
+    }
+
+    a.contact {
+      display: inline-block;
+      background: linear-gradient(90deg, #2b5876, #4e4376);
+      color: white;
+      padding: 10px 20px;
+      border-radius: 25px;
+      text-decoration: none;
+      font-weight: bold;
+    }
+
+    a.contact:hover {
+      background: linear-gradient(90deg, #ff416c, #ff4b2b);
+    }
+  </style>
 </head>
 <body>
 
-<header>
-  <div class="wrap nav">
-    <div class="brand"><div class="logo"></div> W Krainie Paragrafów</div>
-    <nav>
-      <a class="btn small alt" href="#o-nas">O nas</a>
-      <a class="btn small alt" href="#materialy">Materiały</a>
-      <a class="btn small" href="#kontakt">Kontakt</a>
-    </nav>
-  </div>
-</header>
+  <header>🌙 W Krainie Paragrafów</header>
 
-<main>
-  <!-- HERO -->
   <section class="hero">
-    <div class="bg"></div>
-    <div class="wrap grid" style="padding-top:34px;padding-bottom:34px">
-      <div class="card">
-        <div class="kicker">Manifest</div>
-        <h1>Człowiek <span style="color:var(--red)">nie</span> jest paragrafem</h1>
-        <p class="subtitle">Wyjaśniamy skomplikowane sprawy po ludzku. Pokazujemy, gdzie kończy się litera prawa, a zaczyna etyka i zdrowy rozsądek.</p>
-        <div class="cta">
-          <a class="btn" href="#materialy">Zobacz materiały</a>
-          <a class="btn alt" href="#kontakt">Napisz do nas</a>
-        </div>
-      </div>
-      <div class="card" style="display:grid;place-items:center;text-align:center">
-        <div class="tagline">Wsparcie, etyka, jasność.<br> Zero prawniczego bełkotu.</div>
-        <img src="/images/avatar.jpg" alt="" style="width:120px;height:120px;border-radius:50%;margin-top:18px;border:2px solid #2b3b64;box-shadow:var(--shadow);object-fit:cover">
-      </div>
-    </div>
+    <h1>Człowiek nie jest paragrafem</h1>
   </section>
 
-  <!-- O NAS -->
-  <section id="o-nas">
-    <div class="wrap">
-      <h2 class="section-title">O projekcie</h2>
-      <div class="cols">
-        <div class="tile">
-          <h3>Po ludzku o prawie</h3>
-          <p class="muted">Krótko, jasno, bez żargonu. Jeśli coś da się wytłumaczyć prościej – tak właśnie to zrobimy.</p>
-        </div>
-        <div class="tile">
-          <h3>Etyka przed paragrafem</h3>
-          <p class="muted">Prawo to narzędzie. Godność człowieka – zasada. Pilnujemy, by kolejność nigdy się nie odwróciła.</p>
-        </div>
-        <div class="tile">
-          <h3>Wsparcie i materiały</h3>
-          <p class="muted">Checklisty, wzory pism, wskazówki krok po kroku. Tylko konkret.</p>
-        </div>
-      </div>
-    </div>
-  </section>
+  <footer>
+    <p>Masz sprawę? Napisz: <a class="contact" href="mailto:kontakt@twojadomena.pl">kontakt@twojadomena.pl</a></p>
+  </footer>
 
-  <!-- MATERIAŁY -->
-  <section id="materialy" style="background:linear-gradient(180deg,rgba(18,24,49,.6),rgba(18,24,49,.2))">
-    <div class="wrap">
-      <h2 class="section-title">Najnowsze materiały</h2>
-      <div class="cols">
-        <article class="tile">
-          <img src="/images/card1.jpg" alt="" style="width:100%;height:160px;object-fit:cover;border-radius:12px;filter:saturate(105%)">
-          <h3>Jak pisać skuteczne pismo do instytucji</h3>
-          <p class="muted">Struktura, przepisy, pułapki formalne. Mini-szablon do skopiowania.</p>
-          <p><a href="#">Czytaj →</a></p>
-        </article>
-        <article class="tile">
-          <img src="/images/card2.jpg" alt="" style="width:100%;height:160px;object-fit:cover;border-radius:12px">
-          <h3>Prawo a etyka: co zrobić, gdy zgrzyta</h3>
-          <p class="muted">Krótki przewodnik: jak domagać się standardów etycznych, nie tylko literalnych.</p>
-          <p><a href="#">Czytaj →</a></p>
-        </article>
-        <article class="tile">
-          <img src="/images/card3.jpg" alt="" style="width:100%;height:160px;object-fit:cover;border-radius:12px">
-          <h3>Kontakt z sądem: zasady, które działają</h3>
-          <p class="muted">Jak pisać, żeby odpowiedzieli. I co robić, gdy nie odpowiadają.</p>
-          <p><a href="#">Czytaj →</a></p>
-        </article>
-      </div>
-    </div>
-  </section>
-
-  <!-- MANIFEST / LISTA -->
-  <section>
-    <div class="wrap grid" style="grid-template-columns:1fr 1fr">
-      <div class="tile">
-        <h3>Nasze zasady</h3>
-        <ul class="list">
-          <li><span class="dot"></span><span>Najpierw człowiek, potem paragraf.</span></li>
-          <li><span class="dot"></span><span>Prosty język, zero waty.</span></li>
-          <li><span class="dot"></span><span>Transparentność i źródła.</span></li>
-          <li><span class="dot"></span><span>Szacunek i stanowczość jednocześnie.</span></li>
-        </ul>
-      </div>
-      <div class="tile">
-        <h3>W czym pomagamy</h3>
-        <ul class="list">
-          <li><span class="dot"></span><span>Porządkowanie spraw i terminów</span></li>
-          <li><span class="dot"></span><span>Wzory pism i checklisty</span></li>
-          <li><span class="dot"></span><span>Strategia komunikacji z urzędem/sądem</span></li>
-          <li><span class="dot"></span><span>Konsultacje etyczne i merytoryczne</span></li>
-        </ul>
-      </div>
-    </div>
-  </section>
-
-  <!-- KONTAKT -->
-  <section id="kontakt">
-    <div class="wrap grid" style="grid-template-columns:1.2fr .8fr">
-      <div class="card">
-        <h2 class="section-title">Kontakt</h2>
-        <p class="muted">Masz sprawę? Napisz krótko, o co chodzi. Odezwiemy się.</p>
-        <p><a class="btn" href="mailto:kontakt@twojadomena.pl">kontakt@twojadomena.pl</a></p>
-        <p class="muted">Preferujesz formularz? Możemy dodać bezpłatny (np. z Formspree) – daj znać.</p>
-      </div>
-      <div class="card">
-        <h3>Media & grafiki</h3>
-        <p class="muted">Wszystkie obrazy ≤ 2&nbsp;MB (Carrd/hosting mobilny lubi mniejsze pliki). Optimum: szerokość 1600–2000&nbsp;px, JPG 75–82%.</p>
-        <p class="muted">Kolory: <b>#00C2FF</b> (niebieski), <b>#FF2D2D</b> (czerwony), tło <b>#0B1020</b>.</p>
-      </div>
-    </div>
-  </section>
-</main>
-
-<footer>
-  <div class="wrap foot">
-    <div>© <span id="y"></span> W Krainie Paragrafów</div>
-    <div><a href="#">Polityka prywatności</a> • <a href="#">Zasady etyczne</a></div>
-  </div>
-</footer>
-<script>document.getElementById('y').textContent=new Date().getFullYear();</script>
 </body>
 </html>
